@@ -8,3 +8,5 @@ include/
 lib/
 local/
 .pyc
+
+**.DS_Store
