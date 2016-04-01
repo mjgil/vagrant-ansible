@@ -12,6 +12,15 @@
       - python-setuptools
       - python-virtualenv
 
+      # build tools + essential
+      - make
+      - curl
+      - tree
+      - build-essential
+      - libssl-dev
+      - golang
+      - git-core
+
 - name: Allow password authentication for local socket users
   sudo: yes
   copy: src=pg_hba.conf dest=/etc/postgresql/9.1/main/pg_hba.conf force=yes
@@ -32,3 +41,4 @@
   sudo: yes
   sudo_user: postgres
   postgresql_user: user={{ db_user }} db={{ db_name }} priv=ALL
+

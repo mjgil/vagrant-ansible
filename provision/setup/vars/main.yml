@@ -1,3 +1,9 @@
 db_name: app1
 db_user: mjgil
 db_password: sdjgh34iutwefhfgbqkj3
+nodejs_forever: true
+nodejs_npm_global_packages:
+  - name: jslint
+  - name: pm2
+  - name: n
+nodejs_version: "5.x"
