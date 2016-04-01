@@ -8,6 +8,29 @@ apt-get -y install ansible
 
 # install ansible-galaxy packages
 ansible-galaxy install geerlingguy.nodejs
+# ansible-galaxy install ANXS.postgresql
+# ansible-galaxy install jdauphant.nginx
+# ansible-galaxy install flyapen.jenkins
+# ansible-galaxy install angstwad.docker_ubuntu
+# ansible-galaxy install geerlingguy.daemonize
+# ansible-galaxy install geerlingguy.mailhog
+# ansible-galaxy install geerlingguy.nginx
+# ansible-galaxy install geerlingguy.git
+# ansible-galaxy install geerlingguy.varnish
+# ansible-galaxy install geerlingguy.security
+# ansible-galaxy install mattwillsher.sshd
+# ansible-galaxy install nickhammond.logrotate
+# ansible-galaxy install kamaln7.swapfile
+# ansible-galaxy install resmo.ntp
+# ansible-galaxy install angstwad.docker_ubuntu
+# ansible-galaxy install ssilab.aws-cli
+# ansible-galaxy install jdauphant.ssl-certs
+# ansible-galaxy install telusdigital.upstart
+# ansible-galaxy install ANXS.monit
+# ansible-galaxy install telusdigital.aws-hostname
+
+# ansible-galaxy install debops.secret
+# ansible-galaxy install debops.core
 
 # copy examples into /home/vagrant (from inside the mgmt node)
 cp -a /vagrant/examples/* /home/vagrant
