@@ -33,7 +33,7 @@ ansible-galaxy install geerlingguy.nodejs
 # ansible-galaxy install debops.core
 
 # copy examples into /home/vagrant (from inside the mgmt node)
-cp -a /vagrant/examples/* /home/vagrant
+cp -a /vagrant/mgmt/* /home/vagrant
 chown -R vagrant:vagrant /home/vagrant
 
 # configure hosts file for our internal network defined by Vagrantfile

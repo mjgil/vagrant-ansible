@@ -1,6 +1,5 @@
 - hosts: all
-  sudo: yes
   roles:
       - setup
       - deploy
-      - geerlingguy.nodejs
+      # - geerlingguy.nodejs
