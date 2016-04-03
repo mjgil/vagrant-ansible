@@ -32,6 +32,10 @@ ansible-galaxy install geerlingguy.nodejs
 # ansible-galaxy install debops.secret
 # ansible-galaxy install debops.core
 
+# ssh-keyscan lb web{1..9} >> ~/.ssh/known_hosts
+# ssh-keygen
+# addkey.yml
+
 # copy examples into /home/vagrant (from inside the mgmt node)
 cp -a /vagrant/mgmt/* /home/vagrant
 chown -R vagrant:vagrant /home/vagrant

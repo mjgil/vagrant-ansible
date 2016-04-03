@@ -1,3 +1,31 @@
----
-- name: install git
-  apt: name=git state=installed update_cache=yes
+- name: Install packages
+  sudo: yes
+  apt: pkg={{ item }} state=installed update_cache=yes
+  with_items:
+      # build tools + essential
+      - make
+      - curl
+      - tree
+      - build-essential
+      - libssl-dev
+      - golang
+      - git-core
+
+- name: clean git directory  
+  file: path=/home/vagrant/git/ state=absent
+
+- name: add git repos
+  git: repo={{ item.repo }}
+        dest=/home/vagrant/git/{{ item.name }}
+        accept_hostkey=True
+  with_items:
+    - {name: 'episode47', repo: 'https://github.com/jweissig/episode-47.git'}
+    - {name: 'z', repo: 'https://github.com/mjgil/z.git'}
+    - {name: 'dotfiles', repo: 'https://github.com/mjgil/dotfiles.git'}
+    # - git@bitbucket.org:mjgil/d3.git
+
+- name: rm bashrc
+  file: path=/home/vagrant/.bashrc state=absent
+
+- name: copy bashrc from dotfiles
+  file: src=/home/vagrant/git/dotfiles/.bashrc dest=/home/vagrant/.bashrc state=link
